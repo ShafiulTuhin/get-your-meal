@@ -1,4 +1,5 @@
 import React, { use, useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
 import Meal from "../Meal/Meal";
 import "./Meals.css";
 
@@ -18,6 +19,14 @@ const Meals = ({ mealsPromise }) => {
       setSelectedMeal(removeMeal);
     }
   };
+  const clearFoodItems = () => {
+    setSelectedMeal([]);
+    if (selectedMeal.length !== 0) {
+      toast.success("Order completed Successfully!");
+    } else {
+      toast.error("Please select meal to make an order");
+    }
+  };
   return (
     <div>
       <h2>Get your meal</h2>
@@ -27,6 +36,9 @@ const Meals = ({ mealsPromise }) => {
           <li key={index}>{meal.strMeal}</li>
         ))}
       </ol>
+      <button onClick={clearFoodItems} className="btn">
+        Confirm Order
+      </button>
       <div className="meals">
         {meals.map((meal) => (
           <Meal
@@ -36,6 +48,7 @@ const Meals = ({ mealsPromise }) => {
           ></Meal>
         ))}
       </div>
+      <ToastContainer />
     </div>
   );
 };
