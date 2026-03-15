@@ -1,10 +1,7 @@
-import { useState } from "react";
 import "./Meal.css";
 
-const Meal = ({ meal, handleSelectedMeal }) => {
-  const [selected, setSelected] = useState(false);
+const Meal = ({ meal, handleSelectedMeal, selected }) => {
   const handleSelect = () => {
-    setSelected(!selected);
     handleSelectedMeal(meal);
   };
   const { strMeal, strArea, strMealThumb } = meal;

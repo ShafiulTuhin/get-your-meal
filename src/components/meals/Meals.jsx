@@ -45,6 +45,7 @@ const Meals = ({ mealsPromise }) => {
             key={meal.idMeal}
             meal={meal}
             handleSelectedMeal={handleSelectedMeal}
+            selected={selectedMeal.some((m) => m.idMeal === meal.idMeal)}
           ></Meal>
         ))}
       </div>
