@@ -1,0 +1,35 @@
+.meal {
+  border: 2px solid rebeccapurple;
+  width: 290px;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.meal-selected {
+  background-color: aquamarine;
+}
+.meal img {
+  width: 100%;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: blueviolet;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: transparent;
+  border: 2px solid blueviolet;
+  color: #000000;
+  transition: all 0.5s;
+}
+
+/* =====Small Devices===== */
+@media only screen and (min-width: 200px) and (max-width: 575px) {
+  .meal {
+    width: 100%;
+  }
+}
