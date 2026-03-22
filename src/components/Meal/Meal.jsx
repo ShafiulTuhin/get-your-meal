@@ -6,7 +6,7 @@ const Meal = ({ meal, handleSelectedMeal, selected }) => {
   };
   const { strMeal, strArea, strMealThumb } = meal;
   return (
-    <div className={`meal ${selected && "meal-selected"}`}>
+    <div className={`meal space-y-3 ${selected && "meal-selected"}`}>
       <img src={strMealThumb} alt={strMealThumb} />
       <h3>Name:{strMeal}</h3>
       <h3>Area:{strArea}</h3>

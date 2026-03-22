@@ -28,15 +28,17 @@ const Meals = ({ mealsPromise }) => {
     }
   };
   return (
-    <div>
-      <h2>Get your meal</h2>
-      <h4>Selected Items: {selectedMeal.length}</h4>
+    <div className="lg:w-10/12 w-full mx-auto px-3 lg:px-0">
+      <h2 className="text-2xl font-bold">Get your meal</h2>
+      <h4 className="my-3">
+        Selected Items: <span className="font-bold">{selectedMeal.length}</span>
+      </h4>
       <ol>
         {selectedMeal.map((meal, index) => (
           <li key={index}>{meal.strMeal}</li>
         ))}
       </ol>
-      <button onClick={clearFoodItems} className="btn">
+      <button onClick={clearFoodItems} className="btn mt-3">
         Confirm Order
       </button>
       <div className="meals">
